@@ -1,0 +1,48 @@
+/* src/components/Projects.css */
+.project {
+  margin-top: 40px;
+  background: #d51818;
+  padding: 15px;
+  border-left: 4px solid #0dced8;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* src/components/Projects.css */
+.projects-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+  
+  .projects-section h2 {
+    font-size: 2rem;
+  }
+}
