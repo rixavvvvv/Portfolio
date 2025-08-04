@@ -329,6 +329,7 @@
 @media (max-width: 768px) {
   .home-section {
     padding: 20px 15px;
+    padding-top: 100px; /* Add top padding to account for fixed navbar */
   }
   
   .hero-content {
@@ -380,6 +381,10 @@
 }
 
 @media (max-width: 480px) {
+  .home-section {
+    padding-top: 120px; /* Increase top padding for smaller screens */
+  }
+  
   .main-title {
     font-size: 2.2rem;
   }

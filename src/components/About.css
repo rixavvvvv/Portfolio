@@ -151,7 +151,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .about-section {
-    padding: 80px 15px;
+    padding: 100px 15px; /* Increased top padding to account for fixed navbar */
   }
   
   .about-content {
@@ -177,6 +177,10 @@
 }
 
 @media (max-width: 480px) {
+  .about-section {
+    padding: 120px 15px; /* Further increased top padding for smaller screens */
+  }
+  
   .about-title {
     font-size: 1.8rem;
   }

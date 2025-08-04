@@ -400,6 +400,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 100px 20px; /* Add top padding to account for fixed navbar */
+  }
+  
   .contact-container {
     padding: 40px 20px;
   }
@@ -429,5 +433,15 @@
   .cancel-btn,
   .submit-btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 120px 15px; /* Further increased top padding for smaller screens */
+  }
+  
+  .contact-container h2 {
+    font-size: 2rem;
   }
 }

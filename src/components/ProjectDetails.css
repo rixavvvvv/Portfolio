@@ -447,6 +447,7 @@
 @media (max-width: 768px) {
   .project-details-container {
     padding: 20px 15px;
+    padding-top: 100px; /* Add top padding to account for fixed navbar */
   }
   
   .project-left,
@@ -473,6 +474,25 @@
     left: 20px;
     padding: 10px 20px;
     font-size: 13px;
+  }
+}
+
+/* Additional mobile responsive fixes */
+@media (max-width: 480px) {
+  .project-details-container {
+    padding-top: 120px; /* Increase top padding for smaller screens */
+  }
+  
+  .project-details-img {
+    height: 300px; /* Reduce height for smaller screens */
+    max-width: 280px;
+  }
+  
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }
 
