@@ -24,9 +24,29 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add logic to send the form data
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
+    
+    // Create email content
+    const subject = encodeURIComponent('New Collaboration Request from Portfolio');
+    const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+GitHub: ${formData.github || 'Not provided'}
+
+Message:
+${formData.message}
+
+---
+Sent from your portfolio website
+    `);
+    
+    // Open email client with pre-filled content
+    const mailtoLink = `mailto:shrivastavrishabh003@gmail.com?subject=${subject}&body=${body}`;
+    window.open(mailtoLink, '_blank');
+    
+    // Show success message
+    alert('Thank you for your message! Your email client will open with a pre-filled message. Please send it to complete the process.');
+    
+    // Reset form
     setFormData({ name: '', email: '', github: '', message: '' });
     setShowForm(false);
   };

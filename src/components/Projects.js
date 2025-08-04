@@ -8,7 +8,7 @@ import biomarkImg from '../assets/Biomark.jpg';
 
 function Projects() {
   return (
-    <div className="projects-section">
+    <div className="projects-section" id="projects">
       <h2>Featured Projects</h2>
              <div className="projects-grid">
          <ProjectCard

@@ -21,11 +21,18 @@ const ProjectCard = ({ title, description, image, projectKey }) => {
   return (
     <div className="project-card">
       <img src={image} alt={title} className="project-image" />
-      <h3 className="project-title">{title}</h3>
-      <p className="project-description">{description}</p>
-      <button className="read-more-button" onClick={handleReadMore}>
-        Read More
-      </button>
+      <div className="project-content">
+        <h3 className="project-title">{title}</h3>
+        <p className="project-description">{description}</p>
+        {/* <div className="project-tech">
+          <span className="tech-badge">React.js</span>
+          <span className="tech-badge">Node.js</span>
+          <span className="tech-badge">MongoDB</span>
+        </div> */}
+        <button className="read-more-button" onClick={handleReadMore}>
+          Read More
+        </button>
+      </div>
     </div>
   );
 };

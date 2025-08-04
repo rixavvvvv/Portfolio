@@ -1,29 +1,71 @@
-/* Contact Section */
+/* Professional Tech Contact Section */
 .contact-section {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tech grid background */
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .contact-container {
   max-width: 1000px;
   width: 100%;
   text-align: center;
-  background: white;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(20px);
   border-radius: 25px;
   padding: 60px 40px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d4ff, #0099cc, #ff6b6b);
+  animation: borderFlow 3s linear infinite;
+  border-radius: 25px 25px 0 0;
+}
+
+@keyframes borderFlow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .contact-container h2 {
   font-size: 3rem;
   font-weight: 800;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 50%, #ff6b6b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,9 +73,10 @@
 
 .contact-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #cccccc;
   margin-bottom: 50px;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Social Media Stickers */
@@ -45,11 +88,14 @@
 }
 
 .sticker {
-  background: white;
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  border: 2px solid transparent;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -63,7 +109,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, transparent 30%, rgba(102, 126, 234, 0.05) 50%, transparent 70%);
+  background: linear-gradient(135deg, transparent 30%, rgba(0, 212, 255, 0.05) 50%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -74,7 +120,10 @@
 
 .sticker:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.4);
 }
 
 .sticker-icon {
@@ -92,7 +141,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .sticker:hover .sticker-icon {
@@ -102,15 +151,17 @@
 .sticker-label {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
 }
 
 .sticker-id {
   font-size: 0.95rem;
-  color: #666;
+  color: #cccccc;
   font-weight: 500;
   word-break: break-all;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* Gmail Sticker */
@@ -120,7 +171,9 @@
 
 .gmail-sticker:hover {
   border-color: #ea4335;
-  box-shadow: 0 25px 50px rgba(234, 67, 53, 0.2);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(234, 67, 53, 0.3);
 }
 
 /* LinkedIn Sticker */
@@ -130,7 +183,9 @@
 
 .linkedin-sticker:hover {
   border-color: #0077b5;
-  box-shadow: 0 25px 50px rgba(0, 119, 181, 0.2);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 119, 181, 0.3);
 }
 
 /* GitHub Sticker */
@@ -140,7 +195,9 @@
 
 .github-sticker:hover {
   border-color: #333;
-  box-shadow: 0 25px 50px rgba(51, 51, 51, 0.2);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(51, 51, 51, 0.3);
 }
 
 /* Collaboration Section */
@@ -149,24 +206,25 @@
 }
 
 .collaboration-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #ffffff;
   border: none;
   padding: 18px 40px;
-  border-radius: 50px;
+  border-radius: 12px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
 }
 
 .collaboration-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
-  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+  background: linear-gradient(135deg, #00b8e6 0%, #0088b3 100%);
 }
 
 /* Form Modal */
@@ -176,24 +234,28 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 
 .form-modal {
-  background: white;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(20px);
   border-radius: 25px;
   padding: 0;
   max-width: 500px;
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 212, 255, 0.2);
   animation: modalSlideIn 0.3s ease;
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
 
 @keyframes modalSlideIn {
@@ -208,8 +270,8 @@
 }
 
 .form-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #ffffff;
   padding: 25px 30px;
   border-radius: 25px 25px 0 0;
   display: flex;
@@ -221,12 +283,13 @@
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
+  font-family: 'Inter', sans-serif;
 }
 
 .close-btn {
   background: rgba(255, 255, 255, 0.2);
   border: none;
-  color: white;
+  color: #ffffff;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -254,27 +317,36 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
   font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 15px;
-  border: 2px solid #e1e5e9;
+  border: 2px solid rgba(0, 212, 255, 0.3);
   border-radius: 12px;
   font-size: 1rem;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  font-family: inherit;
+  font-family: 'Inter', sans-serif;
+  background: rgba(30, 30, 30, 0.8);
+  color: #ffffff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  background: rgba(40, 40, 40, 0.8);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999999;
 }
 
 .form-group textarea {
@@ -290,37 +362,40 @@
 }
 
 .cancel-btn {
-  background: #f8f9fa;
-  color: #666;
-  border: 2px solid #e1e5e9;
+  background: rgba(60, 60, 60, 0.8);
+  color: #cccccc;
+  border: 2px solid rgba(0, 212, 255, 0.3);
   padding: 12px 25px;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .cancel-btn:hover {
-  background: #e9ecef;
-  border-color: #adb5bd;
+  background: rgba(80, 80, 80, 0.8);
+  border-color: rgba(0, 212, 255, 0.5);
+  color: #ffffff;
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #ffffff;
   border: none;
   padding: 12px 30px;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+  font-family: 'Inter', sans-serif;
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+  background: linear-gradient(135deg, #00b8e6 0%, #0088b3 100%);
 }
 
 /* Responsive Design */
