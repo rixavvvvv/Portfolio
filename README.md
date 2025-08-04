@@ -6,7 +6,7 @@ Welcome to my personal portfolio repository! This project showcases my skills, p
 
 ## 🚀 Live Demo
 
-🔗 [View Portfolio Website]([https://yourusername.github.io/portfolio](https://portfolio-pearl-ten-97.vercel.app/)/) *(Update this after GitHub Pages deployment)*
+🔗 [View Portfolio Website](https://portfolio-pearl-ten-97.vercel.app/) *(Update this after GitHub Pages deployment)*
 
 ---
 
