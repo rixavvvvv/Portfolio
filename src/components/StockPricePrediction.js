@@ -30,15 +30,15 @@ const StockPricePrediction = () => {
         ← Back to Projects
       </button>
       <div className="project-details">
-        {/* Left side - image + short desc */}
+        
         <div className="project-left">
           <img src={stockPredictionImg} alt="Stock Price Prediction Project" className="project-details-img" />
           <div className="short-description">
-            A machine learning model for predicting stock prices using historical data analysis.
+            A POS Billing System project that streamlines sales, inventory, and customer transactions with an intuitive interface and efficient billing process.
           </div>
           <div className="project-links">
             <a 
-              href="https://github.com/rixavvvvv/StockPricePrediction.git" 
+              href="https://github.com/rixavvvvv/Pos-Billing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="github-link"
@@ -49,68 +49,70 @@ const StockPricePrediction = () => {
           </div>
         </div>
 
-        {/* Right side - tech stack and description */}
+        
         <div className="project-right">
           {/* Tech Stack Section */}
           <div className="project-top-right">
             <h3>Tech Stack</h3>
             <ul>
-              <li>Python</li>
-              <li>TensorFlow</li>
-              <li>Pandas</li>
-              <li>NumPy</li>
-              <li>Matplotlib</li>
+              <li>React</li>
+              <li>NextJS</li>
+              <li>TypeScript</li>
+              <li>Postgresql</li>
+              <li>RestFull API</li>
             </ul>
           </div>
 
           {/* Project Description Section */}
           <div className="project-description-section">
-            <h2>📈 Stock Price Prediction — ML Analytics Platform</h2>
+            <h2>📈 POS-billing   — Efficient Sales and Inventory Management.</h2>
             <p>
-              An advanced machine learning system that analyzes historical stock market data to predict future price movements. 
-              The platform uses sophisticated algorithms and data analysis techniques to provide insights for investment decisions, 
-              featuring real-time data processing and interactive visualizations.
+              A POS Billing System built with Next.js and TypeScript that streamlines sales,
+              billing, and inventory management. It enables quick transactions, secure data handling,
+              and an intuitive interface for businesses to manage operations efficiently while ensuring accuracy and scalability..
             </p>
             {showFullText && (
               <>
                 <div className="project-features">
-                  <h4>🔬 Data Analysis Pipeline:</h4>
+                  <h4>🔬 Pipeline & Working :</h4>
                   <ul>
-                    <li>Historical stock data collection and preprocessing</li>
-                    <li>Feature engineering and technical indicator calculation</li>
-                    <li>Time series analysis and pattern recognition</li>
-                    <li>Machine learning model training and validation</li>
-                    <li>Real-time prediction and confidence scoring</li>
+                    <li>Customers/cashiers interact with the POS via a responsive Next.js UI</li>
+                    <li>API routes in Next.js process billing, product search, and cart updates.</li>
+                    <li>PostgreSQL stores and retrieves products, invoices, and transaction records</li>
+                    <li>JWT verifies user sessions before allowing billing or admin actions.</li>
+                    <li>Final bill generated, stored in DB, and displayed in UI.</li>
                   </ul>
                 </div>
                 
                 <div className="project-structure">
                   <h4>📁 Technical Architecture:</h4>
                   <ul>
-                    <li><strong>Data Processing:</strong> Pandas for data manipulation and analysis</li>
-                    <li><strong>ML Framework:</strong> TensorFlow for deep learning models</li>
-                    <li><strong>Numerical Computing:</strong> NumPy for mathematical operations</li>
+                    <li><strong>Frontend:</strong> React.js with TypeScript for responsive UI</li>
+                    <li><strong>Backend:</strong> Node.js + Express.js for RESTful APIs</li>
+                    <li><strong>Database:</strong> PostgreSQL for secure and scalable data storage</li>
                     <li><strong>Visualization:</strong> Matplotlib for data visualization</li>
-                    <li><strong>API Integration:</strong> Real-time stock data feeds</li>
+                    <li><strong>Authentication:</strong> JWT-based user authentication and role management</li>
                   </ul>
                 </div>
                 
                 <div className="project-features">
                   <h4>🚀 Key Features:</h4>
                   <ul>
-                    <li>📊 Advanced data visualization and charts</li>
-                    <li>🤖 Machine learning prediction models</li>
-                    <li>📈 Technical indicator analysis</li>
-                    <li>⚡ Real-time data processing</li>
-                    <li>📱 Interactive dashboard interface</li>
+                    <li>🛒 Seamless Billing & Checkout – Fast and accurate invoice generation with tax and discount handling.</li>
+                    <li>📦 Inventory Management – Real-time product tracking with stock updates.</li>
+                    <li>👤 Role-Based Access – Secure authentication for admin, cashier, and staff.</li>
+                    <li>📑 Invoice History & Reports – Easy access to past transactions with export options.</li>
+                    <li>⚡ Responsive & Fast UI – Built with Next.js for smooth, device-friendly experience.</li>
                   </ul>
                 </div>
                 
                 <div className="project-database">
                   <h4>📊 Data Sources & Models:</h4>
-                  <p><strong>Data Sources:</strong> Historical stock prices, volume, technical indicators, market sentiment</p>
-                  <p><strong>ML Models:</strong> LSTM networks, Random Forest, Linear Regression, ARIMA</p>
-                  <p><strong>Features:</strong> Moving averages, RSI, MACD, Bollinger Bands, price momentum</p>
+                  <p><strong>👤 Users Collection: </strong>Stores user profiles, authentication credentials, and role-based access (Admin, Cashier, Staff).</p>
+                  <p><strong>📦 Products Collection: </strong>Contains product details such as name, price, SKU, stock quantity, and category.</p>
+                  <p><strong>🧾 Orders Collection: </strong>Tracks orders with invoice details, purchased products, total amount, payment method, and status.</p>
+                  <p><strong>💳 Payments Collection: </strong> Manages transaction records including payment type (cash, card, UPI), amount, and confirmation status.</p>
+                  <p><strong>📈 Report Collection: </strong> Stores sales analytics, daily summaries, and performance insights for business tracking.</p>
                 </div>
               </>
             )}

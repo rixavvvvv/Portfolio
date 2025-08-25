@@ -10,26 +10,26 @@ function Projects() {
   return (
     <div className="projects-section" id="projects">
       <h2>Featured Projects</h2>
-             <div className="projects-grid">
-         <ProjectCard
-           image={ecommerceImg}
-           title="K-Scents"
-           description="A full-stack shopping site using MERN stack."
-           projectKey="kscents"
-         />
-         <ProjectCard
-           image={biomarkImg}
-           title="BioMark"
-           description="Biometric system using Python and OpenCV."
-           projectKey="biomark"
-         />
-         <ProjectCard
-           image={stockPredictionImg}
-           title="Stock Price Prediction"
-           description="ML-powered stock price prediction using Python and Streamlit."
-           projectKey="stock-prediction"
-         />
-       </div>
+      <div className="projects-grid">
+        <ProjectCard
+          image={ecommerceImg}
+          title="K-Scents"
+          description="A full-stack shopping site using MERN stack."
+          projectKey="kscents"
+        />
+        <ProjectCard
+          image={biomarkImg}
+          title="BioMark"
+          description="Biometric system using Python and OpenCV."
+          projectKey="biomark"
+        />
+        <ProjectCard
+          image={stockPredictionImg}
+          title="POS-Billing"
+          description="A POS Billing System for fast and efficient sales and inventory management."
+          projectKey="stock-prediction"
+        />
+      </div>
     </div>
   );
 }
