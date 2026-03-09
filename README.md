@@ -77,11 +77,6 @@ Copy
 Edit
 npm run dev
 
-4. Build for production
-Copy
-Edit
-npm run build
-
 
 🧑‍💻 Author
 Rishabh Shrivastav
